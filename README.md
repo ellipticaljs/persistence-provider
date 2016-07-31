@@ -1,4 +1,4 @@
-ELLIPTICAL PERSISTENCE PROVIDER
+ELLIPTICAL REPOSITORY PROVIDER
 ===========================
 
 
@@ -7,14 +7,14 @@ ELLIPTICAL PERSISTENCE PROVIDER
 
 ``` bash
 
-bower install elliptical-persistence-provider --save
+bower install elliptical-repository-provider --save
 
 ```
 
 ## Usage
 
 ```html
-<link rel="import" href="bower_components/elliptical-persistence-provider/elliptical-persistence-provider.html">
+<link rel="import" href="bower_components/elliptical-repository-provider/elliptical-repository-provider.html">
 
 
 ```
