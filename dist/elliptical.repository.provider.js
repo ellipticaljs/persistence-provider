@@ -49,9 +49,9 @@
     };
   }();
 
-  var PersistenceProvider = function () {
-    function PersistenceProvider(key, $provider) {
-      _classCallCheck(this, PersistenceProvider);
+  var RepositoryProvider = function () {
+    function RepositoryProvider(key, $provider) {
+      _classCallCheck(this, RepositoryProvider);
 
       this.key = key;
       this.$provider = $provider;
@@ -60,7 +60,7 @@
       this._onChange(key, $provider);
     }
 
-    _createClass(PersistenceProvider, [{
+    _createClass(RepositoryProvider, [{
       key: 'get',
       value: function get(params, resource, query, callback) {
         this._repo.get(params, resource, query, callback);
@@ -112,8 +112,8 @@
       }
     }]);
 
-    return PersistenceProvider;
+    return RepositoryProvider;
   }();
 
-  exports.default = PersistenceProvider;
+  exports.default = RepositoryProvider;
 });
