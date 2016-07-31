@@ -1,7 +1,7 @@
 {
   "name": "elliptical-repository-provider",
   "description": "a persistent repository provider abstraction",
-  "version":"1.1.0",
+  "version":"1.1.1",
   "main": "elliptical-repository-provider.html",
   "authors": [
     "S. Francis"

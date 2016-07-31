@@ -8,7 +8,7 @@
       exports: {}
     };
     factory(mod.exports, global.elliptical.GenericRepository);
-    global.provider = mod.exports;
+    global.elliptical.RepositoryProvider = mod.exports.default;
   }
 })(this, function (exports, _ellipticalGenericRepository) {
   'use strict';
