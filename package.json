@@ -9,7 +9,7 @@
     "url": "https://github.com/ellipticaljs/persistence-provider"
   },
   "dependencies":{
-    "elliptical-generic-repository":"git+https://github.com/ellipticaljs/persistence-provider.git"
+    "elliptical-generic-repository":"git+https://github.com/ellipticaljs/generic-repository.git"
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
