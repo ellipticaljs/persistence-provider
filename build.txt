@@ -1,1 +1,1 @@
- babel lib -o dist/elliptica.persistence.provider.js
+ babel lib -o dist/elliptical.persistence.provider.js
