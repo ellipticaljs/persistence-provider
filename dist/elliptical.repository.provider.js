@@ -87,7 +87,7 @@
       key: 'query',
       value: function query(filter, asEnumerable) {
         var filterProp = this._filterProp;
-        if (!filterProp) return model;
+        if (!filterProp) return this._model;
         var keys = Object.keys(filter);
         filter = filter[keys[0]];
         filter = filter.toLowerCase();
