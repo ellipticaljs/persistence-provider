@@ -18,3 +18,21 @@ bower install elliptical-repository-provider --save
 
 
 ```
+
+```js
+import RepositoryProvider from 'elliptical-repository-provider';
+
+class MyProvider extends RepositoryProvider{
+   constructor(keyName,$persistenceProvider,filterProp){
+     super(keyName,$persistenceProvider,filterProp)
+   }
+   
+   _onPost(params){
+      //...
+   }
+   
+   _onPut(params){
+      //...
+   }
+   
+}

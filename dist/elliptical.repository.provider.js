@@ -50,11 +50,12 @@
   }();
 
   var RepositoryProvider = function () {
-    function RepositoryProvider(key, $provider) {
+    function RepositoryProvider(key, $provider, filterProp) {
       _classCallCheck(this, RepositoryProvider);
 
       this.key = key;
       this.$provider = $provider;
+      this._filterProp = filterProp;
       this._model = this._getPersistenceModel();
       this._repo = new _ellipticalGenericRepository2.default(this._model);
       this._onChange(key, $provider);
@@ -68,11 +69,13 @@
     }, {
       key: 'post',
       value: function post(params, resource, callback) {
+        params = this._onPost(params);
         this._repo.post(params, resource, callback);
       }
     }, {
       key: 'put',
       value: function put(params, resource, callback) {
+        params = this._onPut(params);
         this._repo.put(params, resource, callback);
       }
     }, {
@@ -83,7 +86,15 @@
     }, {
       key: 'query',
       value: function query(filter, asEnumerable) {
-        return this._model;
+        var filterProp = this._filterProp;
+        if (!filterProp) return model;
+        var keys = Object.keys(filter);
+        filter = filter[keys[0]];
+        filter = filter.toLowerCase();
+        var result = this.enumerable().Where(function (x) {
+          return x[filterProp].toLowerCase().indexOf(filter) == 0;
+        });
+        return result.ToArray();
       }
     }, {
       key: 'enumerable',
@@ -109,6 +120,16 @@
         this._repo.onChange = function (model) {
           $provider.set(key, model);
         };
+      }
+    }, {
+      key: '_onPost',
+      value: function _onPost(params) {
+        return params;
+      }
+    }, {
+      key: '_onPut',
+      value: function _onPut(params) {
+        return params;
       }
     }]);
 
